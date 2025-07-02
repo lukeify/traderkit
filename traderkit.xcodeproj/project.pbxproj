@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A3F062C52DF869F000A0FCF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3F062AE2DF869EF00A0FCF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3F062B52DF869EF00A0FCF6;
+			remoteInfo = traderkit;
+		};
+		A3F062CF2DF869F000A0FCF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3F062AE2DF869EF00A0FCF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3F062B52DF869EF00A0FCF6;
+			remoteInfo = traderkit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3F062B62DF869EF00A0FCF6 /* traderkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = traderkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F062C42DF869F000A0FCF6 /* traderkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F062CE2DF869F000A0FCF6 /* traderkitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderkitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A3F062B82DF869EF00A0FCF6 /* traderkit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = traderkit;
+			sourceTree = "<group>";
+		};
+		A3F062C72DF869F000A0FCF6 /* traderkitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = traderkitTests;
+			sourceTree = "<group>";
+		};
+		A3F062D12DF869F000A0FCF6 /* traderkitUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = traderkitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3F062B32DF869EF00A0FCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F062C12DF869F000A0FCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F062CB2DF869F000A0FCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3F062AD2DF869EF00A0FCF6 = {
+			isa = PBXGroup;
+			children = (
+				A3F062B82DF869EF00A0FCF6 /* traderkit */,
+				A3F062C72DF869F000A0FCF6 /* traderkitTests */,
+				A3F062D12DF869F000A0FCF6 /* traderkitUITests */,
+				A3F062B72DF869EF00A0FCF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3F062B72DF869EF00A0FCF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3F062B62DF869EF00A0FCF6 /* traderkit.app */,
+				A3F062C42DF869F000A0FCF6 /* traderkitTests.xctest */,
+				A3F062CE2DF869F000A0FCF6 /* traderkitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3F062B52DF869EF00A0FCF6 /* traderkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3F062D82DF869F000A0FCF6 /* Build configuration list for PBXNativeTarget "traderkit" */;
+			buildPhases = (
+				A3F062B22DF869EF00A0FCF6 /* Sources */,
+				A3F062B32DF869EF00A0FCF6 /* Frameworks */,
+				A3F062B42DF869EF00A0FCF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A3F062B82DF869EF00A0FCF6 /* traderkit */,
+			);
+			name = traderkit;
+			packageProductDependencies = (
+			);
+			productName = traderkit;
+			productReference = A3F062B62DF869EF00A0FCF6 /* traderkit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3F062C32DF869F000A0FCF6 /* traderkitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3F062DB2DF869F000A0FCF6 /* Build configuration list for PBXNativeTarget "traderkitTests" */;
+			buildPhases = (
+				A3F062C02DF869F000A0FCF6 /* Sources */,
+				A3F062C12DF869F000A0FCF6 /* Frameworks */,
+				A3F062C22DF869F000A0FCF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3F062C62DF869F000A0FCF6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A3F062C72DF869F000A0FCF6 /* traderkitTests */,
+			);
+			name = traderkitTests;
+			packageProductDependencies = (
+			);
+			productName = traderkitTests;
+			productReference = A3F062C42DF869F000A0FCF6 /* traderkitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A3F062CD2DF869F000A0FCF6 /* traderkitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3F062DE2DF869F000A0FCF6 /* Build configuration list for PBXNativeTarget "traderkitUITests" */;
+			buildPhases = (
+				A3F062CA2DF869F000A0FCF6 /* Sources */,
+				A3F062CB2DF869F000A0FCF6 /* Frameworks */,
+				A3F062CC2DF869F000A0FCF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3F062D02DF869F000A0FCF6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A3F062D12DF869F000A0FCF6 /* traderkitUITests */,
+			);
+			name = traderkitUITests;
+			packageProductDependencies = (
+			);
+			productName = traderkitUITests;
+			productReference = A3F062CE2DF869F000A0FCF6 /* traderkitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3F062AE2DF869EF00A0FCF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					A3F062B52DF869EF00A0FCF6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					A3F062C32DF869F000A0FCF6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = A3F062B52DF869EF00A0FCF6;
+					};
+					A3F062CD2DF869F000A0FCF6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = A3F062B52DF869EF00A0FCF6;
+					};
+				};
+			};
+			buildConfigurationList = A3F062B12DF869EF00A0FCF6 /* Build configuration list for PBXProject "traderkit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3F062AD2DF869EF00A0FCF6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A3F062B72DF869EF00A0FCF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3F062B52DF869EF00A0FCF6 /* traderkit */,
+				A3F062C32DF869F000A0FCF6 /* traderkitTests */,
+				A3F062CD2DF869F000A0FCF6 /* traderkitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3F062B42DF869EF00A0FCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F062C22DF869F000A0FCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F062CC2DF869F000A0FCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3F062B22DF869EF00A0FCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F062C02DF869F000A0FCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3F062CA2DF869F000A0FCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3F062C62DF869F000A0FCF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3F062B52DF869EF00A0FCF6 /* traderkit */;
+			targetProxy = A3F062C52DF869F000A0FCF6 /* PBXContainerItemProxy */;
+		};
+		A3F062D02DF869F000A0FCF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3F062B52DF869EF00A0FCF6 /* traderkit */;
+			targetProxy = A3F062CF2DF869F000A0FCF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A3F062D62DF869F000A0FCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A3F062D72DF869F000A0FCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A3F062D92DF869F000A0FCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = traderkit/traderkit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewing.traderkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A3F062DA2DF869F000A0FCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = traderkit/traderkit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewing.traderkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A3F062DC2DF869F000A0FCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewing.traderkitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/traderkit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/traderkit";
+			};
+			name = Debug;
+		};
+		A3F062DD2DF869F000A0FCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewing.traderkitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/traderkit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/traderkit";
+			};
+			name = Release;
+		};
+		A3F062DF2DF869F000A0FCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewing.traderkitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = traderkit;
+			};
+			name = Debug;
+		};
+		A3F062E02DF869F000A0FCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLZAXH2BJ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewing.traderkitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = traderkit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3F062B12DF869EF00A0FCF6 /* Build configuration list for PBXProject "traderkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F062D62DF869F000A0FCF6 /* Debug */,
+				A3F062D72DF869F000A0FCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3F062D82DF869F000A0FCF6 /* Build configuration list for PBXNativeTarget "traderkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F062D92DF869F000A0FCF6 /* Debug */,
+				A3F062DA2DF869F000A0FCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3F062DB2DF869F000A0FCF6 /* Build configuration list for PBXNativeTarget "traderkitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F062DC2DF869F000A0FCF6 /* Debug */,
+				A3F062DD2DF869F000A0FCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3F062DE2DF869F000A0FCF6 /* Build configuration list for PBXNativeTarget "traderkitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F062DF2DF869F000A0FCF6 /* Debug */,
+				A3F062E02DF869F000A0FCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3F062AE2DF869EF00A0FCF6 /* Project object */;
+}
