@@ -23,7 +23,7 @@ struct ContentView: View {
                 allowedContentTypes: [.commaSeparatedText],
                 onCompletion: handleImport
             )
-            TradesTableView()
+            OrdersTableView()
         }
         .padding()
     }
@@ -59,7 +59,7 @@ struct ContentView: View {
                     .split(separator: ",")
                     .map { String($0).trimmingCharacters(in: .whitespaces) }
                 
-                let rec = Trade(ticker: parts[0], timestamp: parts[1], price: Double(parts[2]) ?? 0.0)
+                let rec = Order(ticker: parts[0], timestamp: parts[1], price: Double(parts[2]) ?? 0.0)
                 context.insert(rec)
             }
             

@@ -12,7 +12,7 @@ import SwiftData
 struct traderkitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().modelContainer(for: Trade.self)
+            ContentView().modelContainer(for: Order.self)
         }
     }
 }

@@ -8,20 +8,20 @@
 import SwiftUI
 import SwiftData
 
-struct TradesTableView: View {
-    @Query var trades: [Trade]
+struct OrdersTableView: View {
+    @Query var orders: [Order]
     
     var body: some View {
-        Table(trades) {
+        Table(orders) {
             TableColumn("Ticker", value: \.ticker)
             TableColumn("Time", value: \.timestamp)
-            TableColumn("Price") { (t: Trade) in
-                Text(String(format: "%.2f", t.price))
+            TableColumn("Price") { (o: Order) in
+                Text(String(format: "%.2f", o.price))
             }
         }
     }
 }
 
 #Preview {
-    TradesTableView()
+    OrdersTableView()
 }

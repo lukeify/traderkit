@@ -1,5 +1,5 @@
 //
-//  Trade.swift
+//  Order.swift
 //  traderkit
 //
 //  Created by Luke on 04/07/2025.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-@Model final class Trade {
+@Model final class Order {
     var ticker: String
     var timestamp: String
     var price: Double
