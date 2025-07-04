@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var context
+    
     @State private var importing = false
-    @State private var tradeEntries: [DasCsvTradeEntry] = []
     
     var body: some View {
         VStack {
@@ -18,50 +20,57 @@ struct ContentView: View {
             }
             .fileImporter(
                 isPresented: $importing,
-                allowedContentTypes: [.commaSeparatedText]
-            ) { result in
-                switch result {
-                case .success(let file):
-                    print(file.absoluteString)
-                    readCsv(from: file)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
+                allowedContentTypes: [.commaSeparatedText],
+                onCompletion: handleImport
+            )
+            TradesTableView()
         }
         .padding()
     }
     
-    private func readCsv(from file: URL) {
-        guard file.startAccessingSecurityScopedResource() else {
-            print("Couldn't access security-scoped resource.")
-            return
-        }
-        
-        defer { file.stopAccessingSecurityScopedResource() }
-        
-        do {
-            let data = try Data(contentsOf: file)
-            guard let content = String(data: data, encoding: .utf8) else {
-                print("Unable to decode CSV as UTF-8")
+    private func handleImport(_ result: Result<URL, any Error>) {
+        switch result {
+        case .success(let url):
+            guard url.startAccessingSecurityScopedResource() else {
+                print("Couldn't access security-scoped resource.")
                 return
             }
             
-            tradeEntries = content
-                .split(whereSeparator: \.isNewline)
-                .dropFirst()
-                .map(String.init)
-                .map { line in
-                    let parts = line
-                        .split(separator: ",")
-                        .map { String($0).trimmingCharacters(in: .whitespaces) }
-                    
-                    return DasCsvTradeEntry(time: parts[0], price: Double(parts[1]) ?? 0.0)
-                }
+            defer { url.stopAccessingSecurityScopedResource() }
             
-            print(tradeEntries)
+            readCsv(from: url)
+        case .failure(let error):
+            print("Import cancelled: \(error).")
+        }
+    }
+    
+    private func readCsv(from file: URL) {
+        do {
+            let data = try Data(contentsOf: file)
+            guard let content = String(data: data, encoding: .utf8) else {
+                print("Unable to decode CSV as UTF-8.")
+                return
+            }
+            
+            let lines = content.split(whereSeparator: \.isNewline).dropFirst().map(String.init)
+            
+            for line in lines {
+                let parts = line
+                    .split(separator: ",")
+                    .map { String($0).trimmingCharacters(in: .whitespaces) }
+                
+                let rec = Trade(ticker: parts[0], timestamp: parts[1], price: Double(parts[2]) ?? 0.0)
+                context.insert(rec)
+            }
+            
+            do {
+                try context.save()
+            } catch {
+                print("Save failed.")
+            }
+            
         } catch {
-            print("Failed to read CSV file: \(error)")
+            print("Failed to read CSV file: \(error).")
         }
     }
 }
