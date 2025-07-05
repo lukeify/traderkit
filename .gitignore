@@ -1,3 +1,4 @@
+*.csv
 traderkit.xcodeproj/xcuserdata/
 traderkit.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 traderkit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
