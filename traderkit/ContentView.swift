@@ -67,25 +67,25 @@ struct ContentView: View {
                     throw CsvParsingError.invalidValue("Price value is invalid")
                 }
                 
-                // If there is already a trade, the order may be a part of it.
-                if let lastTrade = acc.popLast() {
-                    // If the current order matches the ticker of the most recent trade, it is part of the order.
-                    if (lastTrade.ticker == parts[0]) {
-                        let order = Order(timestamp: parts[1], position: positionValue, price: priceValue, trade: lastTrade)
-                        lastTrade.orders.append(order)
-                        acc.append(lastTrade)
-                    } else {
-                        acc.append(lastTrade)
-                        let newTrade = Trade(ticker: parts[0], orders: [])
-                        let order = Order(timestamp: parts[1], position: positionValue, price: priceValue, trade: newTrade)
-                        newTrade.orders.append(order)
-                        acc.append(newTrade)
+                // Instantiate the order object.
+                let order = Order(timestamp: parts[1], position: positionValue, price: priceValue)
+                
+                // Iterate backwards through the accumulator to find an open trade that matches the ticker for the order.
+                // Once found, associate the trade with the order
+                var iter = acc.reversed().makeIterator()
+                while let trade = iter.next() {
+                    if trade.ticker == parts[0] && trade.isOpen {
+                        trade.orders.append(order)
+                        order.trade = trade
+                        break
                     }
-                } else {
-                    let newTrade = Trade(ticker: parts[0], orders: [])
-                    let order = Order(timestamp: parts[1], position: positionValue, price: priceValue, trade: newTrade)
-                    newTrade.orders.append(order)
-                    acc.append(newTrade)
+                }
+                
+                if order.trade == nil {
+                    let trade = Trade(ticker: parts[0], orders: [])
+                    order.trade = trade
+                    trade.orders.append(order)
+                    acc.append(trade)
                 }
             }
             

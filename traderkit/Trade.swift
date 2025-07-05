@@ -15,7 +15,7 @@ import SwiftData
     var isOpen: Bool {
         self.orders.reduce(into: 0.0) { acc, order in
             acc += order.position
-        } == 0.0
+        } != 0.0
     }
     
     init(ticker: String, orders: [Order]) {

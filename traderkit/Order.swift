@@ -12,9 +12,9 @@ import SwiftData
     var timestamp: String
     var price: Double
     var position: Double
-    @Relationship var trade: Trade
+    @Relationship var trade: Trade?
     
-    init(timestamp: String, position: Double, price: Double, trade: Trade) {
+    init(timestamp: String, position: Double, price: Double, trade: Trade? = nil) {
         self.timestamp = timestamp
         self.price = price
         self.position = position
