@@ -9,13 +9,15 @@ import Foundation
 import SwiftData
 
 @Model final class Order {
-    var ticker: String
     var timestamp: String
     var price: Double
+    var position: Double
+    @Relationship var trade: Trade
     
-    init(ticker: String, timestamp: String, price: Double) {
-        self.ticker = ticker
+    init(timestamp: String, position: Double, price: Double, trade: Trade) {
         self.timestamp = timestamp
         self.price = price
+        self.position = position
+        self.trade = trade
     }
 }
