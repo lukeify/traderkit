@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection: String?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationSplitView {
+            List(selection: $selection) {
+                NavigationLink("Scanner", value: "scanner")
+                NavigationLink("Journal", value: "journal")
+            }
+        } detail: {
+            if selection == "scanner" {
+                Text("Hello!")
+            } else if selection == "journal" {
+                Text("Goodbye!")
+            } else {
+                Text("Select an item from the list")
+                    .foregroundColor(.gray)
+            }
         }
-        .padding()
     }
 }
 
