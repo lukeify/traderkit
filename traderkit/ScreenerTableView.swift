@@ -27,17 +27,30 @@ struct ScreenerTableView: NSViewRepresentable {
         return Coordinator()
     }
     
-    func makeNSView(context: Context) -> NSTableView {
+    func makeNSView(context: Context) -> NSScrollView {
         let tv = NSTableView()
         tv.delegate = context.coordinator
         tv.dataSource = context.coordinator
         
-        tv.addTableColumn(NSTableColumn())
+        // Attach a header.
+        tv.headerView = NSTableHeaderView()
         
-        return tv
+        // Enables the macOS standard "look" where each row has an alternating backround color.
+        tv.usesAlternatingRowBackgroundColors = true
+        
+        let col = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("Column"))
+        col.title = "Fruits"
+        col.resizingMask = .autoresizingMask
+        
+        tv.addTableColumn(col)
+        
+        let scrollView = NSScrollView()
+        scrollView.documentView = tv
+        
+        return scrollView
     }
     
-    func updateNSView(_ nsView: NSTableView, context: Context) {
+    func updateNSView(_ nsView: NSScrollView, context: Context) {
         // TODO: Update logic here
     }
 }
