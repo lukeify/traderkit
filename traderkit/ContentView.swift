@@ -18,7 +18,20 @@ struct ContentView: View {
             }
         } detail: {
             if selection == "scanner" {
-                Text("Hello!")
+                VStack {
+                    ScreenerTableView()
+                    Spacer()
+                }
+                // Scanner criteria:
+                // Current price +- 2% from previous day close
+                // Premarket shares traded > 50,000
+                // Price > 1
+                // Average True Range % > ???
+                // Short Interest < 30%
+                
+                // Sort by:
+                // Volume
+                // RVol (
             } else if selection == "journal" {
                 Text("Goodbye!")
             } else {

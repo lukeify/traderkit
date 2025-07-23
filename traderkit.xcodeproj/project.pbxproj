@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A3FD26022E1D7244000EDA75 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A3FD26012E1D7244000EDA75 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A3F062C52DF869F000A0FCF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		A3F062B62DF869EF00A0FCF6 /* traderkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = traderkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F062C42DF869F000A0FCF6 /* traderkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F062CE2DF869F000A0FCF6 /* traderkitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderkitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3FD26012E1D7244000EDA75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		A3F062AD2DF869EF00A0FCF6 = {
 			isa = PBXGroup;
 			children = (
+				A3FD26012E1D7244000EDA75 /* README.md */,
 				A3F062B82DF869EF00A0FCF6 /* traderkit */,
 				A3F062C72DF869F000A0FCF6 /* traderkitTests */,
 				A3F062D12DF869F000A0FCF6 /* traderkitUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FD26022E1D7244000EDA75 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
