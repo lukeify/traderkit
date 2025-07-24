@@ -50,3 +50,9 @@ Value of `grpc-swift-proto-generator-config.json` before deletion:
   }
 }
 ```
+
+Transports are considered "expensive" and should be maintained throughout the application lifetime:
+
+https://swiftpackageindex.com/grpc/grpc-swift-2/2.1.0/documentation/grpccore/clienttransport
+
+> A typical transport implementation will establish and maintain connections to a server (or servers) and manage these over time, potentially closing idle connections and creating new ones on demand. As such transports can be expensive to create and as such are intended to be used as long-lived objects which exist for the lifetime of your application.
