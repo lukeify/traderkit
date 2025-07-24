@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct traderkitApp: App {
+    @StateObject var api = TraderkitApi()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().task {
+                do {
+                    try await api.initialize()
+                } catch {
+                    print("Failed to initialize!")
+                }
+            }
         }
     }
 }
