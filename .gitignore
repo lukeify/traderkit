@@ -1,4 +1,8 @@
+# Xcode
 traderkit.xcodeproj/xcuserdata/
 traderkit.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 traderkit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 traderkit.xcodeproj/project.xcworkspace/xcuserdata/luke.xcuserdatad/UserInterfaceState.xcuserstate
+
+# Protobuf
+*.pb.swift
