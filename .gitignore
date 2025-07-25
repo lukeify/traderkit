@@ -6,3 +6,4 @@ traderkit.xcodeproj/project.xcworkspace/xcuserdata/luke.xcuserdatad/UserInterfac
 
 # Protobuf
 *.pb.swift
+*.grpc.swift
