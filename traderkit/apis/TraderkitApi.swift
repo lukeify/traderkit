@@ -9,24 +9,33 @@ import GRPCCore
 import GRPCNIOTransportHTTP2
 
 final class TraderkitApi: ObservableObject {
-    private var grpcManager: GRPCClientManager?
+    private var client: GRPCClient<HTTP2ClientTransport.Posix>?
     
-    class GRPCClientManager {
-        static private(set) var client: GRPCClient<HTTP2ClientTransport.Posix>?
+    func initializeGrpcClient() async {
+        let transport = try! HTTP2ClientTransport.Posix(
+            target: .ipv4(host: "127.0.0.1", port: 8080),
+            transportSecurity: .plaintext
+        )
         
-        static func initialize() async throws {
-            try await withGRPCClient(
-                transport: .http2NIOPosix(
-                    target: .ipv4(host: "docker.host.internal"),
-                    transportSecurity: .plaintext
-                )
-            ) { client in
-                self.client = client
+        let client = GRPCClient(transport: transport)
+        self.client = client
+        
+        Task {
+            do {
+                try await client.runConnections()
+            } catch {
+                print("gRPC runConnections() exited with error: \(error)")
             }
         }
     }
     
-    func initialize() async throws {
-        try await GRPCClientManager.initialize()
+    func shutdownGrpcClient() {
+        if let client = self.client {
+            client.beginGracefulShutdown()
+        }
+    }
+    
+    func screeners() -> ScreenerService {
+        return ScreenerService(client: self.client!)
     }
 }

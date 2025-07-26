@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 @main
 struct traderkitApp: App {
@@ -14,11 +15,10 @@ struct traderkitApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().task {
-                do {
-                    try await api.initialize()
-                } catch {
-                    print("Failed to initialize!")
-                }
+                await api.initializeGrpcClient()
+                try! await api.screeners().preview()
+            }.onReceive(NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)) { _ in
+                api.shutdownGrpcClient()
             }
         }
     }
