@@ -14,12 +14,13 @@ struct traderkitApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().task {
-                await api.initializeGrpcClient()
-                try! await api.screeners().preview()
-            }.onReceive(NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)) { _ in
-                api.shutdownGrpcClient()
-            }
+            ContentView()
+                .environmentObject(api)
+                .task {
+                    await api.initializeGrpcClient()
+                }.onReceive(NotificationCenter.default.publisher(for: NSApplication.willTerminateNotification)) { _ in
+                    api.shutdownGrpcClient()
+                }
         }
     }
 }

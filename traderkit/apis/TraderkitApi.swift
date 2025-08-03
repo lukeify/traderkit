@@ -10,6 +10,7 @@ import GRPCNIOTransportHTTP2
 
 final class TraderkitApi: ObservableObject {
     private var client: GRPCClient<HTTP2ClientTransport.Posix>?
+    @Published var connectionEstablished: Bool = false
     
     func initializeGrpcClient() async {
         let transport = try! HTTP2ClientTransport.Posix(
@@ -22,6 +23,9 @@ final class TraderkitApi: ObservableObject {
         
         Task {
             do {
+                await MainActor.run {
+                    self.connectionEstablished = true
+                }
                 try await client.runConnections()
             } catch {
                 print("gRPC runConnections() exited with error: \(error)")
@@ -35,7 +39,17 @@ final class TraderkitApi: ObservableObject {
         }
     }
     
+    func healthChecks() -> HealthCheckService {
+        guard let client = self.client else {
+            fatalError("Client not instantiated")
+        }
+        return HealthCheckService(client: client)
+    }
+    
     func screeners() -> ScreenerService {
-        return ScreenerService(client: self.client!)
+        guard let client = self.client else {
+            fatalError("Client not instantiated")
+        }
+        return ScreenerService(client: client)
     }
 }
