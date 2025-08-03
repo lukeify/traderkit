@@ -14,11 +14,10 @@ class ScreenerService {
         self.client = client
     }
     
-    public func preview() async throws -> Screeners_ScreenerPreviewResponse {
-        print("Running preview")
-        let screener = Screeners_Screener.Client(wrapping: self.client)
+    public func preview() async throws -> Traderkit_ScreenerPreviewResponse {
+        let screener = Traderkit_Screener.Client(wrapping: self.client)
         
-        let previewReq = Screeners_ScreenerFiltersRequest.with {
+        let previewReq = Traderkit_ScreenerFiltersRequest.with {
             $0.filters = []
         }
         

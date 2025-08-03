@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package screeners;
+package traderkit;
 
 // Defines a `Screener` service allowing users to preview how many stocks match their screener criteria, with the
 // response being a uint32 representing the number of equities that match.
