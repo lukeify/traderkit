@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package traderkit;
+
+import "google/protobuf/empty.proto";
+
+service HealthChecks {
+    rpc Monitor(google.protobuf.Empty) returns (stream HealthCheckMonitorResponse) {}
+}
+
+message HealthCheckMonitorResponse {
+    bool ok = 1;
+}

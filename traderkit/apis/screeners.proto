@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package traderkit;
+
+// Defines a `Screener` service allowing users to preview how many stocks match their screener criteria, with the
+// response being a uint32 representing the number of equities that match.
+service Screener {
+  // Previews a collection of filters that would comprise a screener, returning the number of matches in response.
+  rpc Preview(ScreenerFiltersRequest) returns (ScreenerPreviewResponse) {}
+}
+
+// The operators that can be used when filtering equities according to criteria. The only one implemented right now is
+// `EQUALS`.
+enum Operator {
+  EQUALS = 0;
+}
+
+message Filter {
+  string key = 1;
+  Operator operator = 2;
+  repeated string value = 3;
+}
+
+message ScreenerFiltersRequest {
+  // An array of the stock tickers to form part of the screener.
+  repeated Filter filters = 1;
+}
+
+message ScreenerPreviewResponse {
+  // The number of matches for the screener preview.
+  uint32 matches = 1;
+}
